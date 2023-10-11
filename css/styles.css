@@ -202,7 +202,7 @@ img {
 /** ============== DESCTIPTION ===================== */
 
 .desc {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .visually-hidden {
@@ -220,10 +220,17 @@ img {
 
 .desc-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
 }
 .desc-list-item {
-  flex-basis: calc((100% - 24px * 3) / 4);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .desc-list-wrap {
   padding: 24px 100px;
@@ -247,9 +254,10 @@ img {
 
 .desc-list-subtitle {
   color: var(--NAVY-BLUE, #2e2f42);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 36px;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.1; /* 111.111% */
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
@@ -257,7 +265,8 @@ img {
 .desc-list-text {
   color: var(--SLATE, #434455);
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
 }
 
@@ -810,16 +819,61 @@ img {
 
 /** =============== Media ========================= */
 
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
 /** =============== Media-Tablet ================== */
 
-/* @media screen and (min-width: 768px) {
-} */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .desc-list {
+    gap: 72px 24px;
+  }
+
+  .desc-list-item {
+    width: calc((100% - 24px) / 2);
+    justify-content: left;
+  }
+  .desc-list-subtitle {
+    text-align: left;
+  }
+}
 
 /** =============================================== */
 
 /** =============== Media-Desktop ================== */
 
-/* @media screen and (min-width: 1158px) {
-} */
-
+@media screen and (max-width: 1157px) {
+  .desc-list-wrap {
+    display: none;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .desc {
+    padding: 120px 0;
+  }
+  .desc-list-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+  }
+  .desc-list-text {
+    font-weight: 400;
+  }
+  .desc-list {
+    gap: 8px 24px;
+  }
+  .desc-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+}
 /** =============================================== */
