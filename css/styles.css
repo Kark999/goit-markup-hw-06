@@ -140,6 +140,10 @@ img {
 
 /** ============== ORDER ========================== */
 
+.container {
+  max-width: 320px;
+}
+
 .order-container {
   background-color: var(--NAVY-BLUE, #2e2f42);
   padding: 72px 0;
@@ -833,11 +837,11 @@ img {
 
 /** =============== Media ========================= */
 
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
   .container {
     max-width: 320px;
   }
-}
+} */
 
 /** =============== Media-Tablet ================== */
 
@@ -867,7 +871,7 @@ img {
 
   .order-title {
     font-size: 56px;
-    width: 496px;
+    max-width: 496px;
     line-height: 1.07;
     margin-bottom: 36px;
     text-transform: none;
@@ -941,6 +945,7 @@ img {
   .order-title {
     margin-bottom: 48px;
   }
+
   .desc {
     padding: 120px 0;
   }
