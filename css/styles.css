@@ -37,17 +37,22 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .header-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   color: var(--IRIS, #4d5ae5);
   font-family: Raleway, sans-serif;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  padding: 16px 0;
 }
 .header-logo-color {
   color: var(--IRIS, #2e2f42);
@@ -57,29 +62,41 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.header-container {
-  display: flex;
+
+.menu-open-btn {
   align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: 0;
+}
+.menu-open-icon {
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .header-menu {
-  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
-  position: relative;
+  padding: 24px 0;
 }
+
+.header-menu-item {
+  margin-bottom: 20px;
+}
+
 .header-navigation {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .header-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
-.header-menu-item {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
+
 .header-menu-item:first-child .header-menu-link {
   color: #404bbf;
 }
@@ -91,13 +108,11 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
-  bottom: -1px;
+  bottom: -21px;
   left: 0;
 }
 
 .header-address {
-  display: flex;
-  margin-left: auto;
   font-style: normal;
 }
 
@@ -108,7 +123,6 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-menu-link:active,
@@ -123,9 +137,9 @@ img {
 
 .header-list-link {
   color: var(--SLATE, #434455);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: 0.03em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-list-link:hover,
@@ -135,7 +149,70 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 24px 24px 40px 16px;
+}
 
+.menu-close-btn {
+  position: absolute;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-width: 1px;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.menu-close-btn .menu-close-icon {
+  fill: #2f2e42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .menu-close-icon {
+  fill: #ffffff;
+}
+
+.modal-btn:focus .menu-close-icon {
+  fill: #ffffff;
+}
+.menu-close-icon {
+}
+.mob-menu-item {
+}
+.mob-menu-link {
+}
+.mob-list {
+}
+.mob-list-item {
+}
+.mob-list-link {
+}
+.mob-soc {
+}
+.mob-social-networks {
+}
+.mob-soc-link {
+}
+.mob-soc-icon {
+}
 /** =============================================== */
 
 /** ============== ORDER ========================== */
@@ -257,9 +334,6 @@ img {
 .desc-list-icon {
   align-items: center;
   justify-content: center;
-}
-
-.portfolio-img {
 }
 
 .desc-list-subtitle {
@@ -837,17 +911,26 @@ img {
 
 /** =============== Media ========================= */
 
-/* @media screen and (min-width: 320px) {
-  .container {
-    max-width: 320px;
-  }
-} */
-
 /** =============== Media-Tablet ================== */
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .header-menu {
+    display: flex;
+  }
+  .header-list {
+    display: flex;
+    max-width: 118px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header-logo {
+    padding: 24px 0;
+  }
+  .menu-open-btn {
+    display: none;
   }
   .order-container {
     padding: 112px 0;
@@ -922,6 +1005,7 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .order-container {
     padding: 188px 0;
     background-image: linear-gradient(
