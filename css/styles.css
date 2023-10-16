@@ -155,7 +155,7 @@ img {
   color: var(--OCEAN, #404bbf);
 }
 
-/* .mob-menu {
+.mob-menu {
   width: 100vw;
   height: 100dvh;
   position: fixed;
@@ -163,7 +163,7 @@ img {
   left: 0;
   z-index: 3;
   background-color: #ffffff;
-} */
+}
 
 /* .mob-menu {
   width: 100%;
