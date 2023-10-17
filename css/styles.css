@@ -586,17 +586,17 @@ img {
   background: var(--NAVY-BLUE, #2e2f42);
 }
 .footer-container {
-  min-width: 320px;
-  background: var(--NAVY-BLUE, #2e2f42);
-  padding: 96px 16px;
+  padding: 96px 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 72px;
 }
 .footer-logo-text {
   text-align: center;
 }
 .footer-logo {
+  display: block;
   color: var(--IRIS, #4d5ae5);
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -690,7 +690,6 @@ img {
 
 .footer-form-title {
   color: var(--WHITE, #fff);
-  /* font-family: Roboto; */
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% */
@@ -993,6 +992,9 @@ img {
   .menu-open-btn {
     display: none;
   }
+  .mob-menu {
+    display: none;
+  }
   .order-container {
     padding: 112px 0;
     background-image: linear-gradient(
@@ -1046,9 +1048,11 @@ img {
   .portfolio-list-item {
     width: calc((100% - 24px) / 2);
   }
+  .footer {
+    padding: 0;
+  }
   .footer-container {
     padding: 96px 164px 96px 108px;
-    flex-direction: row;
     gap: 24px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1059,9 +1063,6 @@ img {
   }
   .footer-soc {
     display: block;
-    /* text-align: left;
-    gap: 0;
-    align-items: flex-start; */
   }
   .footer-soc-text {
     margin-bottom: 16px;
@@ -1184,6 +1185,28 @@ img {
   }
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
+  }
+  .footer-container {
+    padding: 100px 0;
+    gap: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .form-container {
+    display: block;
+  }
+  .footer-form {
+    display: flex;
+  }
+  .footer-form-title {
+    margin-bottom: 16px;
+  }
+  .footer-logo-text {
+    margin-right: 120px;
+  }
+  .footer-soc {
+    margin-right: 80px;
   }
 }
 /** =============================================== */
