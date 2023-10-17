@@ -1058,14 +1058,15 @@ img {
     text-align: left;
   }
   .footer-soc {
-    text-align: left;
+    display: block;
+    /* text-align: left;
     gap: 0;
-    align-items: flex-start;
+    align-items: flex-start; */
   }
   .footer-soc-text {
     margin-bottom: 16px;
+    text-align: left;
   }
-
   .form-container {
     align-items: flex-start;
   }
