@@ -713,7 +713,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  border: 1px solid var(--WHITE, #fff);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
@@ -721,7 +721,6 @@ img {
   padding: 0 16px;
   color: #ffffff;
   margin-bottom: 16px;
-  opacity: 0.3;
 }
 .footer-form-input::placeholder {
   color: currentColor;
