@@ -916,7 +916,7 @@ img {
 .check-text {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 
   color: var(--LIGHT-SLATE, #8e8f99);
   font-size: 12px;
@@ -937,7 +937,6 @@ img {
   height: 16px;
   border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
   border-radius: 2px;
-  margin-right: 8px;
   align-items: center;
   justify-content: center;
   fill: transparent;
