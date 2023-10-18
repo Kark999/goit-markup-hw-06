@@ -1052,20 +1052,21 @@ img {
     padding: 0;
   }
   .footer-container {
-    padding: 96px 164px 96px 108px;
-    gap: 24px;
+    padding-left: 108px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
   }
   .footer-logo-text {
     width: 264px;
     text-align: left;
+    margin-bottom: 48px;
   }
   .footer-soc {
-    display: block;
   }
   .footer-soc-text {
-    margin-bottom: 16px;
+    display: block;
     text-align: left;
   }
   .form-container {
